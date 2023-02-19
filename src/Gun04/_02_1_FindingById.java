@@ -18,6 +18,13 @@ public class _02_1_FindingById {
         WebElement surName = driver.findElement(By.id("last_8"));
         surName.sendKeys("gaznepoglu");
 
+        WebElement label1 = driver.findElement(By.id("sublabel_8_first"));
+        System.out.println("label1.getText() = " + label1.getText());
+
+
+        WebElement label2 = driver.findElement(By.id("sublabel_8_last"));
+        System.out.println("label2.getText() = " + label2.getText());
+
         MyFunc.Bekle(10);
         driver.quit();
     }
