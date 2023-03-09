@@ -16,11 +16,17 @@ public class _02_Navigating extends BaseDriver{
         WebElement element = driver.findElement(By.linkText("Alerts (JavaScript)"));
         element.click();
 
+        System.out.println(driver.getCurrentUrl()); //o anda bulunduğum URL
+
         MyFunc.Bekle(3);
         driver.navigate().back(); //Tarayıcı history sinden geri gelir.
 
+        System.out.println(driver.getCurrentUrl());
+
         MyFunc.Bekle(3);
         driver.navigate().forward(); //Tarayıcı history sinden geri gelir.
+
+        System.out.println(driver.getCurrentUrl());
 
         driverStop();
     }

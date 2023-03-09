@@ -8,7 +8,7 @@ import java.time.Duration;
 
 public class BaseDriver {
 
-    public static WebDriver driver;
+    public static ChromeDriver driver;
 
     static{
         //ilk adımda çalışan kod kısmı
