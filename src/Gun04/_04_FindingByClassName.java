@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.safari.SafariDriver;
 
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class _04_FindingByClassName {
     public static void main(String[] args) {
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new SafariDriver();
         driver.get("https://form.jotform.com/221934510376353");
 
         WebElement submitButton = driver.findElement(By.className("form-submit-button"));

@@ -1,0 +1,14 @@
+Absoulte path : /html/body/div/form    uzun sıralı gittiğinde araya bir eleman eklendiğinde çalışmaz
+
+XML yapısı (tag lerin olduğu yapı)
+
+1- Absoulte path : mutlak , tam yolu , Absoulte XPath
+2- cssselector: [id='f']
+   XPath      : //form[@id='f']  :     Relative XPath ->direkt bulur
+
+
+
+   cssselector: [id='f'][method='post'] 2 kriteri yan yana bu şekilde
+   XPath      : //[@id='f' and @method='post']
+
+                (//[@id='f' and @method='post'])[2]
