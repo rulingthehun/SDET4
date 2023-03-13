@@ -1,4 +1,4 @@
-package Gun07._02_Scenario;
+package Gun07._02_ScenarioXPath;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
@@ -6,6 +6,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class testClass extends BaseDriver {
     @Test
@@ -74,20 +76,35 @@ public class testClass extends BaseDriver {
         WebElement continueButton = driver.findElement(By.xpath("//*[@id='continue']"));
         continueButton.click();
 
-        WebElement item1Price = driver.findElement(By.xpath("(//*[@class='inventory_item_price'])[1]"));
-        System.out.println(item1Price.getText());
-        double price1 = Double.parseDouble(item1Price.getText().substring(1));
-        System.out.println("price1 = " + price1);
+        List<WebElement> prices = driver.findElements(By.xpath("//*[@class='inventory_item_price']"));
 
-        WebElement item2Price = driver.findElement(By.xpath("(//*[@class='inventory_item_price'])[2]"));
-        double price2 = Double.parseDouble(item2Price.getText().substring(1));
-        System.out.println("price2 = " + price2);
+        double total = 0;
+
+        for (WebElement e : prices) {
+            total += Double.parseDouble(e.getText().substring(1));
+        }
 
         WebElement priceTotal = driver.findElement(By.xpath("//*[@class='summary_subtotal_label']"));
         double totalPrice = Double.parseDouble(priceTotal.getText().substring(13));
-        System.out.println("total price = " + totalPrice);
+        System.out.println("totalPrice = " + totalPrice);
 
-        Assert.assertTrue("Hatalı sepet", price1 + price2 == totalPrice);
+        Assert.assertTrue("Hatalı sepet", total == totalPrice);
+
+        // 2. YOL:
+        //WebElement item1Price = driver.findElement(By.xpath("(//*[@class='inventory_item_price'])[1]"));
+        //System.out.println(item1Price.getText());
+        //double price1 = Double.parseDouble(item1Price.getText().substring(1));
+        //System.out.println("price1 = " + price1);
+
+        //WebElement item2Price = driver.findElement(By.xpath("(//*[@class='inventory_item_price'])[2]"));
+        //double price2 = Double.parseDouble(item2Price.getText().substring(1));
+        //System.out.println("price2 = " + price2);
+
+        //WebElement priceTotal = driver.findElement(By.xpath("//*[@class='summary_subtotal_label']"));
+        //double totalPrice = Double.parseDouble(priceTotal.getText().substring(13));
+        //System.out.println("total price = " + totalPrice);
+
+        //Assert.assertTrue("Hatalı sepet", price1 + price2 == totalPrice);
 
         System.out.println("Sepet doğru");
 
