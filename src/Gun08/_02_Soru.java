@@ -2,10 +2,13 @@ package Gun08;
 
 import Utility.BaseDriver;
 import Utility.MyFunc;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 import static Utility.BaseDriver.driver;
 import static Utility.BaseDriver.driverStop;
@@ -36,8 +39,14 @@ public class _02_Soru extends BaseDriver {
         WebElement lastName = driver.findElement(By.xpath("input[id^='u_'][name='lastname']"));
         lastName.sendKeys("Gaznepoğlu");
 
+        List<WebElement> secondEmail = driver.findElements(By.xpath("//div[@class='hidden_elem'] [@style='opacity: 0.00001;']"));
+        Assert.assertTrue("2. Email gözüküyor mu", (secondEmail.size()==1));
+
         WebElement regEmail = driver.findElement(By.xpath("input[id^='u_'][name='reg_email__']"));
         regEmail.sendKeys("burakgaznepoglu_1999@hotmail.com");
+
+        secondEmail = driver.findElements(By.xpath("//div[@class='hidden_elem'] [@style='opacity: 0.00001;']"));
+        Assert.assertTrue("2. Email gözüküyor mu", (secondEmail.size()==0));
 
         Select birthdayDay = new Select(driver.findElement(By.id("day")));
         birthdayDay.selectByVisibleText("9");
