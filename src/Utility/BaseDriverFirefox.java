@@ -26,8 +26,8 @@ public class BaseDriverFirefox {
         driver.manage().window().maximize(); //Tam ekran
         driver.manage().deleteAllCookies(); //Sitenin bilgisayarda yağtığı ayarları siler
 
-        Duration dr = Duration.ofSeconds(20);
-        driver.manage().timeouts().pageLoadTimeout(dr); //Sadece tüm sayfanın kodlarının
+        Duration dr = Duration.ofSeconds(2);
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5)); //Sadece tüm sayfanın kodlarının
         // bilgisayara inme süresi ile ilgili
         //Bu eklenmezse Selenium sayfa yüklenene kadar (sonsuza) bekler. : 30 sn süresincesayfanın
         // yüklenmesini bekle, yüklenmezse hata ver.
