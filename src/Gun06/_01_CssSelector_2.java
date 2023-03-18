@@ -1,12 +1,12 @@
 package Gun06;
 
-import Utility.BaseDriver;
+import Utility.BaseDriverSafari;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class _01_CssSelector_2 extends BaseDriver {
+public class _01_CssSelector_2 extends BaseDriverSafari {
     @Test
     public void Test1(){
         driver.get("https://demo.seleniumeasy.com/basic-first-form-demo.html");

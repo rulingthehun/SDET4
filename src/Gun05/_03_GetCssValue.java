@@ -1,10 +1,10 @@
 package Gun05;
 
-import Utility.BaseDriver;
+import Utility.BaseDriverSafari;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class _03_GetCssValue extends BaseDriver {
+public class _03_GetCssValue extends BaseDriverSafari {
     public static void main(String[] args) {
         driver.get("https://www.snapdeal.com");
 

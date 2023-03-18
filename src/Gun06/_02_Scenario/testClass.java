@@ -1,17 +1,13 @@
 package Gun06._02_Scenario;
 
-import Utility.BaseDriver;
+import Utility.BaseDriverSafari;
 import Utility.MyFunc;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.support.ui.Select;
 
-import javax.swing.*;
-
-public class testClass extends BaseDriver {
+public class testClass extends BaseDriverSafari {
     @Test
     public void Test(){
         driver.get("https://formsmarts.com/form/yu?mode=h5");

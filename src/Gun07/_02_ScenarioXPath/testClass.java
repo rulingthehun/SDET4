@@ -1,6 +1,6 @@
 package Gun07._02_ScenarioXPath;
 
-import Utility.BaseDriver;
+import Utility.BaseDriverSafari;
 import Utility.MyFunc;
 import org.junit.Assert;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class testClass extends BaseDriver {
+public class testClass extends BaseDriverSafari {
     @Test
     public void Test(){
         driver.get("https://www.saucedemo.com/");

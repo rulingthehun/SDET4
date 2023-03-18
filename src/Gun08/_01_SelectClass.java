@@ -1,6 +1,6 @@
 package Gun08;
 
-import Utility.BaseDriver;
+import Utility.BaseDriverFirefox;
 import Utility.MyFunc;
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class _01_SelectClass extends BaseDriver {
+public class _01_SelectClass extends BaseDriverFirefox {
     @Test
     public void Test(){
         driver.get("https://www.amazon.com.tr/");

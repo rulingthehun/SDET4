@@ -16,7 +16,7 @@ public class _01_OpeningWebsite {
 
         driver.get("https://www.techno.study/"); //web sayfasini ac
 
-        MyFunc.Bekle(10);
+        MyFunc.Bekle(3);
         driver.quit();
         int sayi = 5;
 

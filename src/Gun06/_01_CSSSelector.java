@@ -1,11 +1,11 @@
 package Gun06;
 
-import Utility.BaseDriver;
+import Utility.BaseDriverSafari;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.junit.Assert; // Javanın kendi test kontrol ve organize sınıfı
 
-public class _01_CSSSelector extends BaseDriver {
+public class _01_CSSSelector extends BaseDriverSafari {
     public static void main(String[] args) {
         driver.get("https://demo.seleniumeasy.com/basic-first-form-demo.html");
 
