@@ -60,19 +60,17 @@ public class testClass extends BaseDriverSafari {
         WebElement checkout = driver.findElement(By.xpath("//*[text()='Checkout']"));
         checkout.click();
 
-        MyFunc.Bekle(1);
         WebElement firstName = driver.findElement(By.xpath("//*[@id='first-name']"));
         firstName.sendKeys("Burak");
 
-        MyFunc.Bekle(1);
         WebElement lastName = driver.findElement(By.xpath("//*[@id='last-name']"));
         lastName.sendKeys("Gaznepoğlu");
 
-        MyFunc.Bekle(1);
+        MyFunc.Bekle(0.7);
         WebElement postalCode = driver.findElement(By.xpath("//*[@id='postal-code']"));
         postalCode.sendKeys("26090");
 
-        MyFunc.Bekle(1);
+        MyFunc.Bekle(2.5);
         WebElement continueButton = driver.findElement(By.xpath("//*[@id='continue']"));
         continueButton.click();
 

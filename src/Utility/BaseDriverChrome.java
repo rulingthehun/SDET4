@@ -3,6 +3,7 @@ package Utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 import java.util.logging.Level;
@@ -18,7 +19,9 @@ public class BaseDriverChrome {
         logger.setLevel(Level.SEVERE);
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-        driver = new ChromeDriver();
+        ChromeOptions options=new ChromeOptions();
+        //options.addArguments("headless");
+        driver = new ChromeDriver(options);
 
         driver.manage().window().maximize(); //Tam ekran
         driver.manage().deleteAllCookies(); //Sitenin bilgisayarda yağtığı ayarları siler

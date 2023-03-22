@@ -24,11 +24,6 @@ public class _07_ActionDragAndDropTest extends BaseDriverFirefox {
         actions.clickAndHold(seoul).build().perform(); //Sürüklenecek element ele alındı
         actions.moveToElement(southKorea).release().build().perform();
 
-        //WebElement oslo = driver.findElement(By.id("box1"));
-        //WebElement oslo = driver.findElement(By.id("box1"));
-        //WebElement oslo = driver.findElement(By.id("box1"));
-        //MyFunc.Bekle(2);
-
         MyFunc.Bekle(2);
         driverStop();
 

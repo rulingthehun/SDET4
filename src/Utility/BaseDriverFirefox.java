@@ -1,8 +1,10 @@
 package Utility;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.service.DriverService;
 
 import java.time.Duration;
 import java.util.logging.Level;
@@ -18,16 +20,19 @@ public class BaseDriverFirefox {
 
         Logger logger = Logger.getLogger("");
         logger.setLevel(Level.SEVERE);
+
         System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
         FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("-headless");
-        driver = new FirefoxDriver();
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+        desiredCapabilities.setAcceptInsecureCerts(true);
+        //options.setHeadless(true);
+        driver = new FirefoxDriver(options);
 
         driver.manage().window().maximize(); //Tam ekran
         driver.manage().deleteAllCookies(); //Sitenin bilgisayarda yağtığı ayarları siler
 
         Duration dr = Duration.ofSeconds(2);
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5)); //Sadece tüm sayfanın kodlarının
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30)); //Sadece tüm sayfanın kodlarının
         // bilgisayara inme süresi ile ilgili
         //Bu eklenmezse Selenium sayfa yüklenene kadar (sonsuza) bekler. : 30 sn süresincesayfanın
         // yüklenmesini bekle, yüklenmezse hata ver.
