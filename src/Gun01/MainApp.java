@@ -1,15 +1,14 @@
 package Gun01;
 
+import Utility.BaseDriverFirefox;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 
-public class MainApp {
+public class MainApp extends BaseDriverFirefox {
     public static void main(String[] args) {
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
-        WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com/");
+        driverStop();
 
     }
 }

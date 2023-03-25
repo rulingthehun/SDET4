@@ -23,6 +23,7 @@ public class _03_FindingByIdNotFoundException {
             System.out.println("Eleman bulunamadi = " + ex.getMessage());
         }
 
+
         MyFunc.Bekle(10);
         driver.quit();
     }
