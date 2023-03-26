@@ -32,8 +32,8 @@ public class _05_FindingByLinkText {
         System.out.println("link.getAttribute(\"title\") = " + link.getAttribute("title"));
         System.out.println("link.getAttribute(\"rel\") = " + link.getAttribute("rel"));
 
-        WebElement link2 = driver.findElement(By.partialLinkText("Süper Fiyat")); //Linkin gorunen bir kismi ile bulma
-//        Sadece a TAGleri icin ozel Locator bulma yontemi
+        WebElement link2 = driver.findElement(By.partialLinkText("Süper Fiyat")); //Linkin gorunen bir kısmı ile bulma
+//        Sadece a TAGleri icin ozel Locator bulma yöntemi
         System.out.println("link2.getText() = " + link2.getText());
 
         MyFunc.Bekle(10);

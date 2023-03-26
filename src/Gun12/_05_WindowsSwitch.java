@@ -21,6 +21,8 @@ public class _05_WindowsSwitch extends BaseDriverEdge {
     public void Test(){
         driver.get("https://www.selenium.dev/");
 
+        String mainPageWindowID = driver.getWindowHandle();
+
         List<WebElement> links = driver.findElements(By.cssSelector("a[target='_blank']"));
         for (WebElement link : links)
             if (!(link.getAttribute("href").contains("mailto")))
@@ -31,9 +33,18 @@ public class _05_WindowsSwitch extends BaseDriverEdge {
             driver.switchTo().window(id);
             System.out.println("ID = " + id + " - Title = " +
                     driver.getTitle() + " - URL: " + driver.getCurrentUrl());
-            MyFunc.Bekle(1);
-            if (!driver.getCurrentUrl().equals("https://www.selenium.dev/"))
-                driver.close();
+            //if (!driver.getCurrentUrl().equals("https://www.selenium.dev/"))
+            //    driver.close();
+        }
+
+        driver.switchTo().window(mainPageWindowID);
+        MyFunc.Bekle(0.7);
+
+        for (String id : windowIDs){
+            if (id.equals(mainPageWindowID))
+                continue;
+            driver.switchTo().window(id);
+            driver.close();
         }
 
         driverStop();
