@@ -1,9 +1,7 @@
 package Gun10;
 
 import Utility.BaseDriverFirefox;
-import Utility.BaseDriverSafari;
 import Utility.MyFunc;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -32,7 +30,7 @@ public class _01_DragAndDropBy extends BaseDriverFirefox {
         actions.dragAndDropBy(leftSlider, unitLength * minPrice, 0).build().perform();
         actions.dragAndDropBy(rightSlider, unitLength * (-(500 - maxPrice - 1)), 0).build().perform();
 
-        MyFunc.Bekle(5);
+        MyFunc.Wait(5);
         driverStop();
     }
 }

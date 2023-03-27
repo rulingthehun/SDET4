@@ -26,37 +26,37 @@ public class testClass extends BaseDriverSafari {
         WebElement password = driver.findElement(By.xpath("//input[@id='password']"));
         password.sendKeys("secret_sauce");
 
-        MyFunc.Bekle(1);
+        MyFunc.Wait(1);
         WebElement login = driver.findElement(By.xpath("//input[@id='login-button']"));
         login.click();
 
-        MyFunc.Bekle(1);
+        MyFunc.Wait(1);
         WebElement backpack = driver.findElement(By.xpath("(//div[@class='inventory_item_name'])[1]"));
         //Text ile bulma
         // "//div[text()='Sauce Labs Backpack']"
         backpack.click();
 
-        MyFunc.Bekle(1);
+        MyFunc.Wait(1);
         WebElement addToCart = driver.findElement(By.xpath("//button[text()='Add to cart']"));
         addToCart.click();
 
-        MyFunc.Bekle(1);
+        MyFunc.Wait(1);
         WebElement backToProducts = driver.findElement(By.xpath("//button[text()='Back to products']"));
         backToProducts.click();
 
-        MyFunc.Bekle(1);
+        MyFunc.Wait(1);
         WebElement sauceLabsBolTShirt = driver.findElement(By.xpath("//*[text()='Sauce Labs Bolt T-Shirt']"));
         sauceLabsBolTShirt.click();
 
-        MyFunc.Bekle(1);
+        MyFunc.Wait(1);
         WebElement addToCartTShirt = driver.findElement(By.xpath("//*[text()='Add to cart']"));
         addToCartTShirt.click();
 
-        MyFunc.Bekle(1);
+        MyFunc.Wait(1);
         WebElement shoppingCartContainer = driver.findElement(By.xpath("//*[@id='shopping_cart_container']"));
         shoppingCartContainer.click();
 
-        MyFunc.Bekle(1);
+        MyFunc.Wait(1);
         WebElement checkout = driver.findElement(By.xpath("//*[text()='Checkout']"));
         checkout.click();
 
@@ -66,11 +66,11 @@ public class testClass extends BaseDriverSafari {
         WebElement lastName = driver.findElement(By.xpath("//*[@id='last-name']"));
         lastName.sendKeys("Gaznepoğlu");
 
-        MyFunc.Bekle(0.7);
+        MyFunc.Wait(0.7);
         WebElement postalCode = driver.findElement(By.xpath("//*[@id='postal-code']"));
         postalCode.sendKeys("26090");
 
-        MyFunc.Bekle(2.5);
+        MyFunc.Wait(2.5);
         WebElement continueButton = driver.findElement(By.xpath("//*[@id='continue']"));
         continueButton.click();
 

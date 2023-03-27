@@ -25,7 +25,7 @@ public class _04_WindowsGiris extends BaseDriverEdge {
         for (String id : windowIDs)
             System.out.println("id = " + id);
 
-        MyFunc.Bekle(6);
+        MyFunc.Wait(6);
         driverStop();
 
     }

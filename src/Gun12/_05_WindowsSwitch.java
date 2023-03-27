@@ -38,7 +38,7 @@ public class _05_WindowsSwitch extends BaseDriverEdge {
         }
 
         driver.switchTo().window(mainPageWindowID);
-        MyFunc.Bekle(0.7);
+        MyFunc.Wait(0.7);
 
         for (String id : windowIDs){
             if (id.equals(mainPageWindowID))

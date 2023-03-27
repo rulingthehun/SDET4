@@ -2,9 +2,7 @@ package Utility;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.*;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.service.DriverService;
 
 import java.time.Duration;
 import java.util.logging.Level;
@@ -42,7 +40,7 @@ public class BaseDriverFirefox {
     }
 
     public static void driverStop(){
-        MyFunc.Bekle(1.5);
+        MyFunc.Wait(1.5);
         driver.quit();
     }
 

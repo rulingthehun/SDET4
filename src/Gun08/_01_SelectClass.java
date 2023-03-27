@@ -20,12 +20,12 @@ public class _01_SelectClass extends BaseDriverFirefox {
         //dropDown.selectByVisibleText("Kitaplar");
         //dropDown.selectByIndex(9);
         dropDown.selectByValue("search-alias=stripbooks");
-        MyFunc.Bekle(1);
+        MyFunc.Wait(1);
 
         WebElement srcButton = driver.findElement(By.id("nav-search-submit-button"));
         srcButton.click();
 
-        MyFunc.Bekle(3);
+        MyFunc.Wait(3);
         WebElement element = driver.findElement(By.xpath("//h1[text()='Kitap']"));
 
         Assert.assertTrue(element.getText().contains("Kitap"));

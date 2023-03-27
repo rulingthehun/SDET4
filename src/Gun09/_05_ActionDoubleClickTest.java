@@ -13,14 +13,14 @@ public class _05_ActionDoubleClickTest extends BaseDriverFirefox {
         driver.get("https://demoqa.com/buttons");
 
         WebElement element = driver.findElement(By.id("doubleClickBtn"));
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
 
         //Actions action = new Actions(driver);
         //action.moveToElement(element).doubleClick().build().perform();
 
         new Actions(driver).doubleClick(element).build().perform(); //kısa hali
 
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
         driverStop();
 
     }

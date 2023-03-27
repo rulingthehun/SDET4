@@ -1,9 +1,7 @@
 package Utility;
 
-import java.util.Scanner;
-
 public class MyFunc {
-    public static void Bekle(double saniye){
+    public static void Wait(double saniye){
         try {
             Thread.sleep((long) (saniye*1000));
         } catch (InterruptedException e) {

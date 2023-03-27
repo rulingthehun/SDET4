@@ -5,7 +5,6 @@ import Utility.MyFunc;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
@@ -25,18 +24,18 @@ public class _02_Soru_2 extends BaseDriverFirefox {
         driver.get("https://www.facebook.com.tr/");
         driver.manage().deleteAllCookies();
 
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
         //JavascriptExecutor js = (JavascriptExecutor)driver;
         //js.executeScript("CertificateWarningController.visitInsecureWebsiteWithTemporaryBypass()");
 
         driver.manage().deleteAllCookies(); //Sayfa açıldıktan sonra cookies silindi
         WebElement acceptButton = driver.findElement(By.cssSelector("button[data-cookiebanner='accept_button']"));
         acceptButton.click();
-        MyFunc.Bekle(1);
+        MyFunc.Wait(1);
         WebElement registrationFormButton = driver.findElement(By.linkText("Create new account"));
         registrationFormButton.click();
 
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
         //WebElement firsName = driver.findElement(By.xpath("input[id^='u_'][name='firstname']"));
         WebElement firsName = driver.findElement(By.name("firstname"));
         firsName.sendKeys("Burak");
@@ -64,7 +63,7 @@ public class _02_Soru_2 extends BaseDriverFirefox {
         Select birthdayYear = new Select(driver.findElement(By.id("year")));
         birthdayYear.selectByValue("1999");
 
-        MyFunc.Bekle(4);
+        MyFunc.Wait(4);
         driverStop();
     }
 }

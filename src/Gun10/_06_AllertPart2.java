@@ -14,11 +14,11 @@ public class _06_AllertPart2 extends BaseDriverFirefox {
         WebElement clickMe2 = driver.findElement(By.cssSelector("button[onclick='myConfirmFunction()']"));
         clickMe2.click();
 
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
 
         driver.switchTo().alert().dismiss();
 
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
 
         driverStop();
     }

@@ -16,7 +16,7 @@ public class _03_ArrowKeysSelection extends BaseDriverFirefox {
 
         WebElement singleContainer = driver.findElement(By.id("autoCompleteSingleContainer"));
         actions.moveToElement(singleContainer).click().sendKeys("b").build().perform();
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
         actions.sendKeys(Keys.DOWN).sendKeys(Keys.ENTER).build().perform();
 
         driverStop();

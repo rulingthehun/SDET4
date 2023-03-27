@@ -26,7 +26,7 @@ public class _05_IntroAlert extends BaseDriverFirefox {
         WebElement clickMe1 = driver.findElement(By.cssSelector("button[class='btn btn-default']"));
         clickMe1.click();
 
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
 
         driver.switchTo().alert().accept(); // Alert kutucuğuna geçildi
 

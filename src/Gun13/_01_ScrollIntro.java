@@ -23,16 +23,16 @@ public class _01_ScrollIntro extends BaseDriverEdge {
     public void Test(){
         driver.get("https://triplebyte.com/");
 
-        MyFunc.Bekle(1.5);
+        MyFunc.Wait(1.5);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, 3000);");
 
-        MyFunc.Bekle(1.2);
+        MyFunc.Wait(1.2);
         js.executeScript("window.scrollTo(0, -3000);");
 
         // scrollTo : Verilen pixele gider. (verilen noktaya gider)
         // scrollBy : Verilen kadar daha ileri gider. (append)
-        MyFunc.Bekle(5);
+        MyFunc.Wait(5);
         driverStop();
 
     }

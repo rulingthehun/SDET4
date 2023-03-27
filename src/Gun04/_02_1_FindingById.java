@@ -4,7 +4,6 @@ import Utility.MyFunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -28,7 +27,7 @@ public class _02_1_FindingById {
         WebElement label2 = driver.findElement(By.id("sublabel_8_last"));
         System.out.println("label2.getText() = " + label2.getText());
 
-        MyFunc.Bekle(10);
+        MyFunc.Wait(10);
         driver.quit();
     }
 }

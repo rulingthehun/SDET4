@@ -24,7 +24,7 @@ public class _07_ActionDragAndDropTest extends BaseDriverFirefox {
         actions.clickAndHold(seoul).build().perform(); //Sürüklenecek element ele alındı
         actions.moveToElement(southKorea).release().build().perform();
 
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
         driverStop();
 
     }

@@ -15,7 +15,7 @@ public class _03_ScrollToWebElement extends BaseDriverEdge {
     @Test
     public void Test(){
         driver.get("https://www.amazon.com.tr/");
-        MyFunc.Bekle(1.1);
+        MyFunc.Wait(1.1);
         driver.manage().deleteAllCookies();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         //scroll u bir elemente kadar nasıl kaydırırım?
@@ -25,10 +25,10 @@ public class _03_ScrollToWebElement extends BaseDriverEdge {
         js.executeScript("arguments[0].scrollIntoView(true);", button);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("İletişim")));
-        MyFunc.Bekle(1.6);
+        MyFunc.Wait(1.6);
         js.executeScript("arguments[0].click();", button);
 
-        MyFunc.Bekle(1.4);
+        MyFunc.Wait(1.4);
         driverStop();
     }
 }

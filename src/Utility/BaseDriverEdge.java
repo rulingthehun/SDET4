@@ -41,7 +41,7 @@ public class BaseDriverEdge {
     }
 
     public static void driverStop(){
-        MyFunc.Bekle(1.5);
+        MyFunc.Wait(1.5);
         driver.quit();
     }
 

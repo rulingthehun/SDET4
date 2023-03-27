@@ -23,7 +23,7 @@ public class _04_ActionClickTest extends BaseDriverSafari {
 
         System.out.println("Action prepered");
 
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
         //action1.perform();
         System.out.println("Action done");
 

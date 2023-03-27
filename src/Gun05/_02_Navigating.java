@@ -16,18 +16,18 @@ public class _02_Navigating extends BaseDriverSafari {
         driver.switchTo().window(window);
 
         driver.navigate().to("https://testpages.herokuapp.com/styled/index.html"); //web sayfası açma komutu
-        MyFunc.Bekle(3);
+        MyFunc.Wait(3);
         WebElement element = driver.findElement(By.linkText("Alerts (JavaScript)"));
         element.click();
 
         System.out.println(driver.getCurrentUrl()); //o anda bulunduğum URL
 
-        MyFunc.Bekle(3);
+        MyFunc.Wait(3);
         driver.navigate().back(); //Tarayıcı history sinden geri gelir.
 
         System.out.println(driver.getCurrentUrl());
 
-        MyFunc.Bekle(3);
+        MyFunc.Wait(3);
         driver.navigate().forward(); //Tarayıcı history sinden geri gelir.
 
         System.out.println(driver.getCurrentUrl());

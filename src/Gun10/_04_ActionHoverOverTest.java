@@ -1,6 +1,5 @@
 package Gun10;
 
-import Utility.BaseDriverChrome;
 import Utility.BaseDriverFirefox;
 import Utility.MyFunc;
 import org.junit.Assert;
@@ -30,17 +29,17 @@ public class _04_ActionHoverOverTest extends BaseDriverFirefox {
         WebElement bibNecklaces = driver.findElement(By.id("catnav-l3-10881"));
 
         actions.moveToElement(jewelryAccessories).build().perform();
-        MyFunc.Bekle(2.5);
+        MyFunc.Wait(2.5);
 
         actions.moveToElement(necklaces).build().perform();
-        MyFunc.Bekle(1);
+        MyFunc.Wait(1);
 
         actions.moveToElement(bibNecklaces).click().build().perform();
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
         String url = driver.getCurrentUrl();
         Assert.assertTrue("Wrong site", url.contains("bib-necklaces"));
 
-        MyFunc.Bekle(3);
+        MyFunc.Wait(3);
         driverStop();
 
     }

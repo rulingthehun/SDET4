@@ -5,7 +5,6 @@ import Utility.MyFunc;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import java.util.List;
@@ -26,7 +25,7 @@ public class _02_Soru extends BaseDriverFirefox {
         driver.get("https://www.facebook.com.tr/");
         driver.manage().deleteAllCookies();
 
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
         //JavascriptExecutor js = (JavascriptExecutor)driver;
         //js.executeScript("CertificateWarningController.visitInsecureWebsiteWithTemporaryBypass()");
 
@@ -36,7 +35,7 @@ public class _02_Soru extends BaseDriverFirefox {
         WebElement registrationFormButton = driver.findElement(By.linkText("Create new account"));
         registrationFormButton.click();
 
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
         WebElement firsName = driver.findElement(By.name("firstname"));
         firsName.sendKeys("Burak");
 
@@ -61,7 +60,7 @@ public class _02_Soru extends BaseDriverFirefox {
         Select birthdayYear = new Select(driver.findElement(By.id("year")));
         birthdayYear.selectByVisibleText("1999");
 
-        MyFunc.Bekle(4);
+        MyFunc.Wait(4);
         driverStop();
 
     }

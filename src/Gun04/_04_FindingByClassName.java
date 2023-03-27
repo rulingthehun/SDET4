@@ -4,7 +4,6 @@ import Utility.MyFunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -41,7 +40,7 @@ public class _04_FindingByClassName {
 //        Aranilan eleman bulunamazsa: findElement NoSuchElement hatasi verir
 //        findElements ise size'i 0 olan List verir, yani hata vermez.
 
-        MyFunc.Bekle(10);
+        MyFunc.Wait(10);
         driver.quit();
     }
 }

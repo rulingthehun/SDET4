@@ -18,10 +18,10 @@ public class _01_ElementStatus extends BaseDriverSafari {
         System.out.println("tuesday.isEnabled() = " + tuesday.isEnabled());
         System.out.println("tuesday.isSelected() = " + tuesday.isSelected());
 
-        MyFunc.Bekle(0.5);
+        MyFunc.Wait(0.5);
         tuesday.click();
 
-        MyFunc.Bekle(2);
+        MyFunc.Wait(2);
         System.out.println("tuesday.isSelected() = " + tuesday.isSelected());
 
         driverStop();
