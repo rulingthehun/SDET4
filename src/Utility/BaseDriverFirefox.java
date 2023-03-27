@@ -3,6 +3,7 @@ package Utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.logging.Level;
@@ -11,6 +12,7 @@ import java.util.logging.Logger;
 public class BaseDriverFirefox {
 
     public static WebDriver driver;
+    public static WebDriverWait wait;
 
     static{
 
@@ -37,6 +39,8 @@ public class BaseDriverFirefox {
         // Eğer 2 sn yüklenirse 20 sn beklemez.
         driver.manage().timeouts().implicitlyWait(dr); //Bütün web elementlerin element bazında
         // elemente özel işlem yapılmadan önce hazır hale gelmesi için verilen mühlet (süre).
+
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
     public static void driverStop(){

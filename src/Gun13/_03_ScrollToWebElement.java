@@ -23,6 +23,7 @@ public class _03_ScrollToWebElement extends BaseDriverEdge {
         WebElement button = driver.findElement(By.linkText("İletişim"));
 
         js.executeScript("arguments[0].scrollIntoView(true);", button);
+        js.executeScript("window.scrollBy(0, -500);"); // javaScript window scroll
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("İletişim")));
         MyFunc.Wait(1.6);
