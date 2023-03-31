@@ -1,13 +1,15 @@
 package Gun10;
 
+import Utility.BaseDriverChrome;
 import Utility.BaseDriverFirefox;
+import Utility.BaseDriverSafari;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class _02_ActionKeyControlSendKeys extends BaseDriverFirefox {
+public class _02_ActionKeyControlSendKeys extends BaseDriverChrome {
     @Test
     public void Test(){
         driver.get("https://demoqa.com/auto-complete");

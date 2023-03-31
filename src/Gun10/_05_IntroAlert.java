@@ -1,12 +1,14 @@
 package Gun10;
 
+import Utility.BaseDriverChrome;
 import Utility.BaseDriverFirefox;
+import Utility.BaseDriverSafari;
 import Utility.MyFunc;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class _05_IntroAlert extends BaseDriverFirefox {
+public class _05_IntroAlert extends BaseDriverChrome {
     /*
       Interview sorusu
       - Alertleri nasıl kullanırsın ?

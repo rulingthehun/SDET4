@@ -1,12 +1,13 @@
 package Gun05;
 
+import Utility.BaseDriverChrome;
 import Utility.BaseDriverSafari;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class _01_FindingElements_tag extends BaseDriverSafari {
+public class _01_FindingElements_tag extends BaseDriverChrome {
     public static void main(String[] args) {
 
 

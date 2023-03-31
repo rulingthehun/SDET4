@@ -4,7 +4,6 @@ import Utility.BaseDriverEdge;
 import Utility.BaseDriverFirefox;
 import Utility.BaseDriverSafari;
 import Utility.MyFunc;
-import org.checkerframework.checker.units.qual.K;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -58,8 +57,8 @@ public class _04_RobotIntro extends BaseDriverFirefox {
         WebElement submitFile = driver.findElement(By.id("submitbutton"));
         submitFile.click();
 
-        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
-        WebElement uploadMessage = wait1.until(ExpectedConditions.visibilityOfElementLocated(By.id("res")));
+
+        WebElement uploadMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("res")));
 
         Assert.assertTrue(uploadMessage.getText().contains("has been successfully uploaded."));
 
