@@ -1,9 +1,6 @@
 package Gun11;
 
-import Utility.BaseDriverEdge;
-import Utility.BaseDriverFirefox;
-import Utility.BaseDriverSafari;
-import Utility.MyFunc;
+import Utility.*;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-public class _01_WaitGiriş extends BaseDriverEdge {
+public class _01_WaitGiriş extends BaseDriverChrome {
     /*
     Selenium Bekletme Konusu
     Thread.Sleep : bu selenium a özel değil, java ya ait yazılımın herhangi bir yerinde verilen süre kadar bekler.

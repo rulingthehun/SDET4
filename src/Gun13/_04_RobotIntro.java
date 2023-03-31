@@ -24,6 +24,13 @@ public class _04_RobotIntro extends BaseDriverFirefox {
         Robot rbt = new Robot();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         MyFunc.Wait(3);
+        //For macOS
+        rbt.keyPress(KeyEvent.VK_META);
+        rbt.keyPress(KeyEvent.VK_TAB);
+        rbt.keyRelease(KeyEvent.VK_TAB);
+        MyFunc.Wait(1);
+        rbt.keyRelease(KeyEvent.VK_META);
+
         for (int i = 0; i < 2; i++) {
             rbt.keyPress(KeyEvent.VK_TAB);
             rbt.keyRelease(KeyEvent.VK_TAB);
