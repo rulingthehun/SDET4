@@ -70,7 +70,6 @@ public class _04_RobotIntro extends BaseDriverFirefox {
         Assert.assertTrue(uploadMessage.getText().contains("has been successfully uploaded."));
 
         MyFunc.Wait(2);
-        //driver.close();
         driverStop();
     }
 }
