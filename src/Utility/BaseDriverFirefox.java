@@ -21,6 +21,7 @@ public class BaseDriverFirefox {
         Logger logger = Logger.getLogger("");
         logger.setLevel(Level.SEVERE);
 
+        System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
         System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
         FirefoxOptions options = new FirefoxOptions();
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
